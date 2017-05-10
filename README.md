@@ -1,8 +1,8 @@
 # SafeYouTubeVideoDownloader
 
 SAFE YOUTUBE VIDEO DOWNLOADER
-*free
-*without advertising
-*without viruses
-*without compromising your PC
-*Only simple, smart, clean and safe code
+*free \n
+*without advertising \n
+*without viruses \n
+*without compromising your PC \n
+*Only simple, smart, clean and safe code \n
