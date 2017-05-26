@@ -21,7 +21,7 @@ print('video bitrate: ',video_bitrate)
 
 
 videos = yt.videos
-video = yt.get('.mp4', '360p')
+video = yt.get('mp4', '360p')
 
 path = '/Users/Fazan/Desktop'
 video.download(path)
