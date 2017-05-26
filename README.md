@@ -8,4 +8,4 @@ SAFE YOUTUBE VIDEO DOWNLOADER (free, without advertising, without viruses, witho
 
 #Something else is finished
 
-#The main prog locate in folder 'SYTVD'
+#The main prog locate in folder 'SYTVD'. To downloade the video you want - clone my repository, open 'SafeYouTubeVideoDownloader.py', write the link, format and size and run!
