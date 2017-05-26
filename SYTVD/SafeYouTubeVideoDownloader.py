@@ -1,5 +1,5 @@
 import important_dont_delete
-video_link = 'https://www.youtube.com/watch?v=l5pregTudRA'
+video_link = 'https://www.youtube.com/watch?v=ze5k5TG2bmA'
 yt = important_dont_delete.YouTube(video_link)
 videos = yt.get_videos()
 print('Information about video:')
@@ -21,7 +21,7 @@ print('video bitrate: ',video_bitrate)
 
 
 videos = yt.videos
-video = yt.get('3gp', '144p')
+video = yt.get('.mp4', '360p')
 
 path = '/Users/Fazan/Desktop'
 video.download(path)
