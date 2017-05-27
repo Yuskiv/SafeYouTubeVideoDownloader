@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+
 from __future__ import unicode_literals
 import os
 from time import clock
@@ -84,18 +83,12 @@ class Video(object):
         file_size = self.file_size(response)
         self._bytes_received = 0
         start = clock()
-        # TODO: Let's get rid of this whole try/except block, let ``OSErrors``
-        # fail loudly.
         try:
             with open(path, 'wb') as dst_file:
                 while True:
                     self._buffer = response.read(chunk_size)
-                    # Check if the buffer is empty (aka no bytes remaining).
                     if not self._buffer:
                         if on_finish:
-                            # TODO: We possibly want to flush the
-                            # `_bytes_recieved`` buffer before we call
-                            # ``on_finish()``.
                             on_finish(path)
                         break
 
@@ -105,9 +98,6 @@ class Video(object):
                         on_progress(self._bytes_received, file_size, start)
 
         except KeyboardInterrupt:
-            # TODO: Move this into the cli, ``KeyboardInterrupt`` handling
-            # should be taken care of by the client. Also you should be allowed
-            # to disable this.
             os.remove(path)
             raise KeyboardInterrupt(
                 "Interrupt signal given. Deleting incomplete video.")
