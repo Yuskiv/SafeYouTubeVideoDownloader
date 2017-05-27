@@ -1,5 +1,4 @@
 import important_dont_delete
-import time
 video_link = 'https://www.youtube.com/watch?v=9-2DK86cGPA'
 yt = important_dont_delete.YouTube(video_link)
 videos = yt.get_videos()
@@ -20,12 +19,9 @@ video_bitrate = first_video.video_bitrate
 print('audio bitrate: ',audio_bitrate)
 print('video bitrate: ',video_bitrate)
 
-starttime = time.time()
 
 videos = yt.videos
 video = yt.get('mp4', '360p')
 
 path = '/Users/Fazan/Desktop'
 video.download(path)
-finishtime = time.time()
-print (finishtime - starttime)
