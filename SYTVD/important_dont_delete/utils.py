@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+
 import argparse
 import re
 import math
@@ -29,11 +28,8 @@ def safe_filename(text, max_length=200):
     text = text.replace('_', ' ')
     text = text.replace(':', ' -')
 
-    # NTFS forbids filenames containing characters in range 0-31 (0x00-0x1F)
     ntfs = [chr(i) for i in range(0, 31)]
 
-    # Removing these SHOULD make most filename safe for a wide range of
-    # operating systems.
     paranoid = ['\"', '\#', '\$', '\%', '\'', '\*', '\,', '\.', '\/', '\:',
                 '\;', '\<', '\>', '\?', '\\', '\^', '\|', '\~', '\\\\']
 
